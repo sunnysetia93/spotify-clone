@@ -1,10 +1,41 @@
 .profile__footer{
-    border: 1px solid purple;
+    display: flex;
+    justify-content: space-between;
     position:fixed;
     bottom:0;
     height: 65px;
-    width: 100%;
+    width: 97%;
     background-color: var(--grey);
     color: white;
     padding: 20px;
+}
+
+.profile__footer_left{
+    flex-basis: 30%;
+}
+
+.profile__footer__right{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.profile__footer__center{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 300px;
+    padding: 0 100px;
+    color: white;
+}
+
+.footer__green {
+    color: var(--spotify-green);
+}
+
+.footer__green {
+    color: var(--spotify-green);
 }
