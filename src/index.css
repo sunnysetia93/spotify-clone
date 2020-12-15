@@ -17,5 +17,6 @@ code {
 }
 
 :root{
-  --spotify-green: #1db954
+  --spotify-green: #1db954;
+  --grey: #282828;
 }

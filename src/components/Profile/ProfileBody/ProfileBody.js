@@ -1,7 +1,10 @@
 import React from 'react';
+import './ProfileBody.css';
 
 const ProfileBody = () => {
-    return <div>ProfileBody</div>
+    return <div className={'profile__profile__body'}>
+        ProfileBody
+    </div>
 }
 
 export default ProfileBody;

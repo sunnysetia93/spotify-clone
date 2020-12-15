@@ -1,0 +1,10 @@
+.profile__footer{
+    border: 1px solid purple;
+    position:fixed;
+    bottom:0;
+    height: 65px;
+    width: 100%;
+    background-color: var(--grey);
+    color: white;
+    padding: 20px;
+}
