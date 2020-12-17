@@ -29,12 +29,14 @@ function App() {
 
         if (token) {
             spotify.getMe().then(userInfo => {
-                // console.log("person", userInfo)
+                console.log("person", userInfo);
                 dispatch({
                     type: actionTypes.SET_USER,
                     user: userInfo
                 });
-            });
+            }).catch(err=>{
+                setToken(null);
+            })
 
             spotify.getUserPlaylists().then(playlists => {
                 dispatch({

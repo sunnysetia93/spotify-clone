@@ -6,7 +6,8 @@
 }
 
 .header__left{
-    flex-basis: 60%;
+    flex: 0.5;
+    min-width: 70px;
     background-color: white;
     color: grey;
     border-radius: 30px;
@@ -16,9 +17,17 @@
     align-items: center;
 }
 
+.header__left > input {
+    border: none;
+    width: 100%;
+}
+
 .header__right{
-    flex-basis: 40%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.header__right > h4{
+    margin-left: 10px;
 }

@@ -3,9 +3,14 @@ import './Header.css';
 
 import { Avatar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import {useMainAppContext} from "../../../../context/MainAppContext";
 
 
 const Header = () => {
+
+    const [{user},dispatch] = useMainAppContext();
+    console.log(user);
+
     return (
         <div className={"header"}>
             <div className={"header__left"}>
@@ -16,8 +21,8 @@ const Header = () => {
                 />
             </div>
             <div className={"header__right"}>
-                <Avatar src={""} alt={"SS"} />
-                <h4>Sunny Setia</h4>
+                <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
+                <h4>{user?.display_name}</h4>
             </div>
         </div>
     )
