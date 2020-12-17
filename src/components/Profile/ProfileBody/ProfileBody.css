@@ -4,4 +4,9 @@
     height: 100vh;
     color: white;
     padding: 30px;
+    overflow-y: overlay;
+}
+
+.profile__profile__body::-webkit-scrollbar{
+    display: none;
 }
