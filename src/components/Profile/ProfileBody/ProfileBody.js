@@ -1,10 +1,14 @@
 import React from 'react';
 import './ProfileBody.css';
 
-const ProfileBody = () => {
-    return <div className={'profile__profile__body'}>
-        ProfileBody
-    </div>
+import Header from './Header/Header';
+
+const ProfileBody = ({spotify}) => {
+    return (
+        <div className={'profile__profile__body'}>
+            <Header/>
+        </div>
+    );
 }
 
 export default ProfileBody;

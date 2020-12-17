@@ -10,7 +10,7 @@ const Profile = ({spotify}) => {
         <div className={"profile"}>
             <div className={"profile__body"}>
                 <Sidebar/>
-                <ProfileBody/>
+                <ProfileBody spotify={spotify}/>
             </div>
             <ProfileFooter/>
         </div>

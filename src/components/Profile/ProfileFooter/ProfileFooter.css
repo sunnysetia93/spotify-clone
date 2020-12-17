@@ -25,12 +25,30 @@
     margin-right: 20px;
 }
 
+.footer__songInfo > h4{
+    margin-bottom: 5px;
+}
+.footer__songInfo > p{
+    font-size: 12px;
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+    ;
+}
+
 .profile__footer__right{
     flex-basis: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
+}
+
+.profile__footer__right * .MuiSlider-root {
+    color: var(--spotify-green);
 }
 
 .profile__footer__center{
