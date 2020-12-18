@@ -7,9 +7,20 @@ import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import {useMainAppContext} from "../../context/MainAppContext";
+import * as actionTypes from "../../context/actionTypes";
 
-const Sidebar = () => {
-    const [{playlists}] = useMainAppContext();
+const Sidebar = ({spotify}) => {
+    const [{playlists}, dispatch] = useMainAppContext();
+
+    function onClickPlaylist(id) {
+        spotify.getPlaylist(id).then((response) => {
+            dispatch({
+                type: actionTypes.SET_DISCOVER_WEEKLY,
+                discover_weekly: response,
+            })
+        });
+    }
+
     return (
         <div className={'sidebar'}>
             <img
@@ -27,7 +38,13 @@ const Sidebar = () => {
             <hr/>
 
 
-            {playlists?.items?.map(playlist => <SidebarOption key={playlist.id} title={playlist.name}/>)}
+            {playlists?.items?.map(playlist => {
+                return <SidebarOption
+                    key={playlist.id}
+                    id={playlist.id}
+                    title={playlist.name}
+                    onClick={onClickPlaylist}
+                />})}
 
         </div>
     )

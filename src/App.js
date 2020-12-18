@@ -29,12 +29,11 @@ function App() {
 
         if (token) {
             spotify.getMe().then(userInfo => {
-                console.log("person", userInfo);
                 dispatch({
                     type: actionTypes.SET_USER,
                     user: userInfo
                 });
-            }).catch(err=>{
+            }).catch(err => {
                 setToken(null);
             })
 
@@ -43,16 +42,20 @@ function App() {
                     type: actionTypes.SET_PLAYLISTS,
                     playlists
                 });
+                const items = playlists.items;
+                if (items && items.length > 0) {
+                    const id = items[0].id;
+                    spotify.getPlaylist(id).then((response) => {
+                        dispatch({
+                            type: actionTypes.SET_DISCOVER_WEEKLY,
+                            discover_weekly: response,
+                        })
+                    });
+                }
             });
 
             //
-            spotify.getPlaylist("37i9dQZEVXcVtpOXGH0Ypq").then((response) =>{
-                console.log({response});
-                dispatch({
-                    type: actionTypes.SET_DISCOVER_WEEKLY,
-                    discover_weekly: response,
-                })
-            });
+
 
         }
     }, [dispatch, setToken, token]);
