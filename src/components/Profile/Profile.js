@@ -12,7 +12,7 @@ const Profile = ({spotify}) => {
                 <Sidebar spotify={spotify}/>
                 <ProfileBody spotify={spotify}/>
             </div>
-            <ProfileFooter/>
+            <ProfileFooter spotify={spotify}/>
         </div>
     )
 }

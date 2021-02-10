@@ -54,6 +54,20 @@ function App() {
                 }
             });
 
+            spotify.getMyCurrentPlaybackState().then((r) => {
+                console.log({r});
+
+                dispatch({
+                    type: actionTypes.SET_PLAYING,
+                    playing: r.is_playing,
+                });
+
+                dispatch({
+                    type: actionTypes.SET_SONG,
+                    song: r.item,
+                });
+            });
+
             //
 
 

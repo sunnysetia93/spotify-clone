@@ -38,13 +38,20 @@ const Sidebar = ({spotify}) => {
             <hr/>
 
 
-            {playlists?.items?.map(playlist => {
-                return <SidebarOption
-                    key={playlist.id}
-                    id={playlist.id}
-                    title={playlist.name}
-                    onClick={onClickPlaylist}
-                />})}
+            {
+                playlists && playlists.items && playlists.items.length > 0 ?
+                    playlists?.items?.map(playlist => {
+                        return <SidebarOption
+                            key={playlist.id}
+                            id={playlist.id}
+                            title={playlist.name}
+                            onClick={onClickPlaylist}
+                        />
+                    })
+                    : <div style={{fontSize: "12px", marginLeft: "15px"}}>No Public Playlist
+                        found!
+                    </div>
+            }
 
         </div>
     )
