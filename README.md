@@ -9,7 +9,7 @@
 
 ![https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/login-page.png](https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/login-page.png)
 
-![https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/oauth-page.png](https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/oauth-page.png)
+![https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/Screenshot%202021-02-19%20at%204.16.48%20PM.png](https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/Screenshot%202021-02-19%20at%204.16.48%20PM.png)
 
 ![https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/homepage.png](https://raw.githubusercontent.com/sunnysetia93/spotify-clone/master/images/homepage.png)
 
